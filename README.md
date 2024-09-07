@@ -1,10 +1,10 @@
 # bulk-data-python
 
-## Consideraciones
+## Considerations
 
-### Para ejecutar el proyecto
+### To exec the project 
 
-1. Por versión de pytho los comandos a usar son py -m venv venv
-2. Se agrega en el archivo requirements.txt la dependencia de openpyxl requerida para poder abrir los excels
-3. Se debe correr con el comando py -m pip install -r requirements.txt
-4. Correr el proyecto con py -m streamlit run app.py
+1. I runned with py -m venv venv
+2. I added and additional dependencie in requirements.txt to import the excel file. I included openpyxl
+3. I shall run with command py -m pip install -r requirements.txt
+4. Run the project with py -m streamlit run app.py
