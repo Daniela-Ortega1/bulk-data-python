@@ -40,13 +40,7 @@ def extract_data_from_excel(excel_file, pqrs_file):
     df = df[['NombreCompleto', 'Sexo', 'Edad', 'Ciudad']]
     df2 = df2[['Tipo', 'ClienteFk', 'FechaCaso', 'Asunto','Estado','FechaCierre','Urgencia']]
 
-    print(df)
-    print(df2)
-
     df_joined = pd.concat([df,df2], axis=1)
-
-    print('Todos juntos')
-    print(df_joined)
 
     insert_data_in_bulk(df_joined, table_name='clientes', second_table_name="pqrs")
     

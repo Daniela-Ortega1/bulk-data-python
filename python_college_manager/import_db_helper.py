@@ -2,17 +2,21 @@ import os
 import mysql.connector
 from mysql.connector import Error
 
+host = os.getenv("DB_HOST_MYSQL","127.0.0.1")
+username = os.getenv("DB_USER_MYSQL","root")
+dbname = os.getenv("DB_NAME_MYSQL","telepizza")
+
 def insert_data_in_bulk(df_joined, table_name='clientes', second_table_name="pqrs"):
     connection = None
     cursor = None
 
     try:
-        #Esto despuès se debe enmascarar con os.getenv
+       
         connection = mysql.connector.connect(
-            host="localhost",
-            user="root",
+            host= host,
+            user= username,
             password="",
-            database="telepizza"
+            database= dbname
         )
 
         if connection.is_connected():
